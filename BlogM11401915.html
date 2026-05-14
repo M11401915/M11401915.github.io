@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>走進宮崎駿的夢幻國度 - 吉卜力專題</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Zhi+Mang+Xing&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ghibli: {
+                            sky: '#7EB2D1',
+                            forest: '#2D4B3E',
+                            sunset: '#E69B73',
+                            paper: '#F9F6F0',
+                            ink: '#2C2C2C',
+                            grass: '#8DA64F'
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Noto Serif TC', 'serif'],
+                        handwriting: ['Zhi Mang Xing', 'cursive'],
+                        body: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1.5s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #F9F6F0;
+            background-image: 
+                radial-gradient(circle at 2px 2px, rgba(45, 75, 62, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .watercolor-blob {
+            position: absolute;
+            z-index: -1;
+            filter: blur(60px);
+            opacity: 0.4;
+            border-radius: 50%;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #8DA64F;
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+        .media-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 24px;
+            transition: transform 0.5s ease;
+        }
+        .media-container:hover img {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="font-body text-ghibli-ink leading-relaxed">
+
+    <!-- Decorative Background Elements -->
+    <div class="watercolor-blob bg-ghibli-sky w-96 h-96 -top-20 -left-20 animate-float"></div>
+    <div class="watercolor-blob bg-ghibli-sunset w-80 h-80 top-1/3 -right-20 animate-float" style="animation-delay: -2s;"></div>
+    <div class="watercolor-blob bg-ghibli-grass w-72 h-72 bottom-0 left-1/4 animate-float" style="animation-delay: -4s;"></div>
+
+    <main class="max-w-5xl mx-auto px-6 py-12 lg:py-24">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-16 animate-fade-in">
+            <span class="inline-block px-4 py-1 rounded-full bg-ghibli-grass/10 text-ghibli-forest font-semibold text-sm mb-4 uppercase tracking-widest">
+                Student ID: M11401915
+            </span>
+            <h1 class="font-display text-4xl md:text-6xl font-black text-ghibli-forest mb-6 leading-tight">
+                走進宮崎駿的夢幻國度：<br/>
+                <span class="text-ghibli-sunset">不只是童話，更是寫給大人的情書</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto font-light italic">
+                「在這個被 AI 繪圖與 3D 特效充斥的時代，為什麼我們依然會為了幾片手繪的積雨雲而感動落淚？」
+            </p>
+        </header>
+
+        <!-- Banner Image Component -->
+        <div class="media-container relative h-[400px] md:h-[600px] mb-20 rounded-[40px] overflow-hidden shadow-2xl animate-fade-in" style="animation-delay: 0.2s;">
+            <div class="absolute inset-0 bg-gradient-to-t from-ghibli-forest/40 to-transparent z-10"></div>
+            <img src='https://opal.google/board/blobs/48a116aa-2f01-4e80-8ef9-c2fe9613d739' alt='Ghibli Inspired Banner' class="w-full h-full object-cover">
+            <div class="absolute bottom-8 left-8 z-20 text-white">
+                <p class="font-handwriting text-3xl opacity-90">Studio Ghibli Magic</p>
+            </div>
+        </div>
+
+        <!-- Article Content - Bento Grid Inspired Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            
+            <!-- Intro Text -->
+            <div class="md:col-span-8 glass-card p-8 md:p-12 rounded-[32px]">
+                <p class="text-lg leading-loose mb-6">
+                    每當提到「宮崎駿」或「吉卜力」，腦海中浮現的不只是可愛的龍貓，更多的是一種難以言喻的安寧與深思。今天，我們不聊數據，聊聊這位大師如何用一輩子的堅持，為世界勾勒出一場場既溫暖又銳利的夢境。
+                </p>
+                <div class="h-px bg-gradient-to-r from-ghibli-grass/40 to-transparent my-8"></div>
+                
+                <h2 class="section-title font-display text-2xl font-bold text-ghibli-forest mb-6">一、 為什麼他的雲看起來特別好拍？</h2>
+                <p class="mb-4">
+                    你有沒有發現，吉卜力的天空特別「藍」，雲朵特別「厚實」？這就是所謂的手繪溫度。宮崎駿堅持傳統手繪感，色彩層次豐富，特別是以細膩的自然景觀營造出「魔幻現實主義」的氛圍。那些讓人想跳進去的治癒系森林，或是被粉絲戲稱為「深夜食堂」的吉卜力美食，背後其實都是對生活的極致觀察——因為畫得夠真實，所以我們感覺到了靈魂。
+                </p>
+                <p>
+                    更重要的是，宮崎駿的故事裡鮮少有簡單的「英雄救美」。這裡的主角大多是勇敢、獨立且充滿韌性的女孩。他的敘事主旨不講簡單的對錯，而是探討「人與自然的共生共存」、「女性自主權」以及從懵懂走向成長的苦澀與甜蜜。
+                </p>
+            </div>
+
+            <!-- Side Card: The Mechanical Fascination -->
+            <div class="md:col-span-4 bg-ghibli-forest text-ghibli-paper p-8 rounded-[32px] flex flex-col justify-center">
+                <h3 class="font-display text-xl font-bold mb-4 text-ghibli-sunset">機械控的浪漫</h3>
+                <p class="text-sm opacity-80 leading-relaxed">
+                    身為「機械迷」的他，在作品中揉合了大量細節控最愛的復古飛行器，那種齒輪轉動的勞動美學，展現了科技與人性拉扯的浪漫。
+                </p>
+                <div class="mt-8 pt-8 border-t border-ghibli-paper/20">
+                    <span class="text-5xl font-display opacity-20">⚙️</span>
+                </div>
+            </div>
+
+            <!-- Section 2: History -->
+            <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                <div class="bg-ghibli-sky/20 p-8 md:p-12 rounded-[32px] border border-ghibli-sky/30">
+                    <h2 class="section-title font-display text-2xl font-bold text-ghibli-forest mb-6">二、 從零到傳奇：吉卜力工作室</h2>
+                    <p class="text-base leading-relaxed">
+                        吉卜力的傳奇並非一蹴而就。1985 年，在《風之谷》取得巨大成功後，宮崎駿與長期戰友高畑勳、製片人鈴木敏夫正式成立了「吉卜力工作室」。這個名字源自二戰時義大利偵察機的稱呼，意為「撒哈拉沙漠上的熱風」，象徵著他們想在當時的動畫界掀起一股新氣旋的野心。
+                    </p>
+                </div>
+                <div class="glass-card p-8 md:p-12 rounded-[32px]">
+                    <h3 class="font-bold text-ghibli-forest mb-4">黃金時代與巔峰</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="bg-ghibli-grass text-white px-2 py-1 rounded text-xs">1980s</span>
+                            <span>《天空之城》、《龍貓》奠定了無可取代的地位。</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-ghibli-grass text-white px-2 py-1 rounded text-xs">2001</span>
+                            <span>《神隱少女》榮獲柏林影展金熊獎及奧斯卡最佳動畫長片。</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="bg-ghibli-grass text-white px-2 py-1 rounded text-xs">現在</span>
+                            <span>《蒼鷺與少年》，大師對生命與歷史的私密告白。</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 3: Why we love it -->
+            <div class="md:col-span-7 glass-card p-8 md:p-12 rounded-[32px]">
+                <h2 class="section-title font-display text-2xl font-bold text-ghibli-forest mb-6">三、 全球影迷集體淪陷！</h2>
+                <p class="mb-6">
+                    吉卜力的魅力在於藝術與商業的「神操作」。小孩子看到的是奇幻怪物與飛行冒險，大人看到的卻是資本社會的殘酷、戰爭的荒謬以及純真的失落。
+                </p>
+                <div class="bg-ghibli-paper p-6 rounded-2xl border-l-4 border-ghibli-sunset italic">
+                    「提到吉卜力絕對不能漏掉靈魂伴侶——久石讓。他的旋律為畫面注入了靈魂，讓無數觀眾『耳朵也會懷孕』。」
+                </div>
+            </div>
+
+            <!-- Section 4: Controversy (Highlight) -->
+            <div class="md:col-span-5 bg-red-50 p-8 rounded-[32px] border border-red-100">
+                <h2 class="section-title font-display text-2xl font-bold text-red-900 mb-6">四、 絕美背後的火藥味</h2>
+                <div class="space-y-4 text-sm">
+                    <details class="group bg-white/50 p-4 rounded-xl cursor-pointer">
+                        <summary class="font-bold text-red-800 list-none flex justify-between items-center">
+                            是反戰還是美化戰爭？ <span class="group-open:rotate-180 transition-transform">↓</span>
+                        </summary>
+                        <p class="mt-2 text-red-700">《風起》引發了政治解讀的落差。有人批評美化戰爭，有人同情被迫創作的匠人。</p>
+                    </details>
+                    <details class="group bg-white/50 p-4 rounded-xl cursor-pointer">
+                        <summary class="font-bold text-red-800 list-none flex justify-between items-center">
+                            環保主義太極端？ <span class="group-open:rotate-180 transition-transform">↓</span>
+                        </summary>
+                        <p class="mt-2 text-red-700">對現代文明的否定近乎決絕，被認為過於理想化甚至排斥進步。</p>
+                    </details>
+                    <details class="group bg-white/50 p-4 rounded-xl cursor-pointer">
+                        <summary class="font-bold text-red-800 list-none flex justify-between items-center">
+                            天才的陰影 <span class="group-open:rotate-180 transition-transform">↓</span>
+                        </summary>
+                        <p class="mt-2 text-red-700">完美主義導致人才斷層，高壓「師徒制」讓接班人成為難題。</p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Section 5: Future -->
+            <div class="md:col-span-12 relative overflow-hidden bg-ghibli-grass p-8 md:p-16 rounded-[40px] text-ghibli-paper text-center">
+                <div class="relative z-10">
+                    <h2 class="font-display text-3xl md:text-4xl font-black mb-8 italic">「說好的退休呢？」</h2>
+                    <p class="max-w-3xl mx-auto text-lg opacity-90 mb-10 leading-loose">
+                        宮崎駿多次宣佈封筆又復出，但在 2023 年推出《蒼鷺與少年》後，影迷們似乎都釋懷了——只要他還能拿得起畫筆，我們就願意等。
+                        現在吉卜力正朝向更專業的「品牌經營」轉型，透過日本電視台（NTV）的資源，確保這些經典 IP 能永續經營。
+                    </p>
+                    <div class="inline-block px-8 py-4 border-2 border-ghibli-paper rounded-full hover:bg-ghibli-paper hover:text-ghibli-grass transition-colors duration-300 font-bold cursor-default">
+                        後宮崎駿時代的探索
+                    </div>
+                </div>
+                <!-- Decorative leaf icons in background -->
+                <span class="absolute top-10 right-10 text-6xl opacity-10">🍃</span>
+                <span class="absolute bottom-10 left-10 text-6xl opacity-10 rotate-45">🍃</span>
+            </div>
+
+        </div>
+
+        <!-- Footer Quote -->
+        <footer class="mt-24 text-center pb-12">
+            <div class="max-w-2xl mx-auto">
+                <p class="font-handwriting text-4xl text-ghibli-forest mb-4">
+                    「我想畫出那種讓人看完後，覺得活著真好的電影。」
+                </p>
+                <p class="text-ghibli-sunset font-bold">— 宮崎駿 Hayao Miyazaki</p>
+            </div>
+            <div class="mt-12 flex justify-center gap-4 opacity-30">
+                <div class="w-2 h-2 rounded-full bg-ghibli-grass"></div>
+                <div class="w-2 h-2 rounded-full bg-ghibli-grass"></div>
+                <div class="w-2 h-2 rounded-full bg-ghibli-grass"></div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // Simple intersection observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card, .grid > div').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
